@@ -76,7 +76,7 @@ npm run format
 Feel free to reach out to me:
 
 * 📧 Email: [thillainatarajan001@gmail.com](mailto:thillainatarajan001@gmail.com)
-* 🐱 GitHub: [github.com/yourusername]([https://github.com/yourusername](https://github.com/THILLAINATARAJAN-B))
+* 🐱 GitHub: [github.com/yourusername](https://github.com/THILLAINATARAJAN-B)
 * 📍 Location: Coimbatore, Tamil Nadu, India
 
 ---
