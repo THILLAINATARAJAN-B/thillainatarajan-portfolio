@@ -1,0 +1,42 @@
+/* Skills.css */
+.shadow-custom {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .shadow-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hover-shadow {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .skill-item .skill-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  

@@ -1,0 +1,33 @@
+/* Contact.css */
+
+.contact-card {
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-card h4 {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .contact-card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  button[type="submit"] {
+    font-weight: 600;
+    padding: 10px;
+  }
+  
