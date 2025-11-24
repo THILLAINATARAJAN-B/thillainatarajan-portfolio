@@ -1,43 +1,104 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaUniversity, FaCalendarAlt, FaBookOpen } from 'react-icons/fa';
-import './Education.css'; // Optional custom styles
+import React from 'react'
+import { GraduationCap, BookOpen } from 'lucide-react'
 
-function Education() {
+const Education = () => {
+  const education = [
+    {
+      degree: 'B.Tech in AI & Data Science',
+      institution: 'Anna University Regional Campus, Coimbatore',
+      year: '2022 - 2026',
+      grade: 'CGPA: 8.2 (82%)',
+      icon: <GraduationCap size={32} />
+    },
+    {
+      degree: 'Higher Secondary (HSC)',
+      institution: 'K.G. Matric Higher Secondary School, Annur',
+      year: '2022',
+      grade: 'Marks: 89%',
+      icon: <BookOpen size={32} />
+    },
+    {
+      degree: 'SSLC',
+      institution: 'K.G. Matric Higher Secondary School, Annur',
+      year: '2020',
+      grade: 'Marks: 98%',
+      icon: <BookOpen size={32} />
+    }
+  ]
+
   return (
-    <section id="education" className="py-5 bg-light">
-      <Container>
-        <h2 className="display-4 mb-5 text-center font-weight-bold">Education</h2>
-        <Row className="justify-content-center">
-          <Col md={10}>
-            <Card className="education-card shadow-lg border-0 mb-4">
-              <Card.Body>
-                <div className="d-flex align-items-center mb-3">
-                  <FaUniversity className="education-icon me-3 text-primary" />
-                  <div>
-                    <h4 className="mb-1">B.E. in AI & Data Science</h4>
-                    <h6 className="text-muted">Anna University – Coimbatore Campus</h6>
-                  </div>
-                </div>
-                <Row className="mb-2">
-                  <Col xs={12} md={6} className="mb-2">
-                    <FaCalendarAlt className="me-2 text-secondary" />
-                    <span><strong>Duration:</strong> 2022 – 2026</span>
-                  </Col>
-                  <Col xs={12} md={6}>
-                    <FaBookOpen className="me-2 text-secondary" />
-                    <span><strong>Focus:</strong> Artificial Intelligence, Machine Learning, Data Analytics</span>
-                  </Col>
-                </Row>
-                <p className="mb-0">
-                  My undergraduate program has emphasized both theoretical foundations and practical applications in AI and Data Science. Key coursework includes Neural Networks, Natural Language Processing, Big Data Analytics, and Computer Vision. I've actively contributed to departmental projects and participated in multiple AI hackathons.
-                </p>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+    <section id="education" className="section" style={{ background: 'var(--dark-bg)' }}>
+      <h2 className="section-title">Education</h2>
+
+      <div style={{
+        maxWidth: '900px',
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '25px'
+      }}>
+        {education.map((edu, index) => (
+          <div key={index} className="card slide-up" style={{
+            animationDelay: `${index * 0.15}s`,
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '25px'
+          }}>
+            <div style={{
+              background: 'rgba(37, 99, 235, 0.1)',
+              padding: '15px',
+              borderRadius: '12px',
+              border: '1px solid rgba(37, 99, 235, 0.2)',
+              color: 'var(--primary-blue)'
+            }}>
+              {edu.icon}
+            </div>
+
+            <div style={{ flex: 1 }}>
+              <h3 style={{
+                fontSize: '1.4rem',
+                fontWeight: '700',
+                marginBottom: '8px',
+                color: 'var(--text-primary)'
+              }}>
+                {edu.degree}
+              </h3>
+
+              <p style={{
+                fontSize: '1.1rem',
+                color: 'var(--primary-blue)',
+                fontWeight: '600',
+                marginBottom: '5px'
+              }}>
+                {edu.institution}
+              </p>
+
+              <div style={{
+                display: 'flex',
+                gap: '20px',
+                flexWrap: 'wrap',
+                marginTop: '10px'
+              }}>
+                <span style={{
+                  color: 'var(--text-muted)',
+                  fontSize: '0.95rem'
+                }}>
+                  {edu.year}
+                </span>
+                <span style={{
+                  color: 'var(--accent-blue)',
+                  fontSize: '0.95rem',
+                  fontWeight: '600'
+                }}>
+                  {edu.grade}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
-  );
+  )
 }
 
-export default Education;
+export default Education
