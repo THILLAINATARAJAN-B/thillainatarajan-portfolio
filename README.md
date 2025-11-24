@@ -481,8 +481,8 @@ Made with ❤️ by [Thillainatarajan B](https://github.com/THILLAINATARAJAN-B)
 © 2025 Thillainatarajan B. All Rights Reserved.
 
 </div>
-Additional Files to Create:
-1. .gitignore
+Additional Required Files:
+.gitignore
 text
 # Dependencies
 node_modules/
@@ -514,7 +514,7 @@ yarn-error.log*
 
 # Netlify
 .netlify/
-2. netlify.toml
+netlify.toml
 text
 [build]
   command = "npm run build"
@@ -534,7 +534,8 @@ text
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-3. LICENSE (MIT License)
+    Referrer-Policy = "strict-origin-when-cross-origin"
+LICENSE
 text
 MIT License
 
