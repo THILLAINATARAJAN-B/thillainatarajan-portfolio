@@ -518,5 +518,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-the portfolio is ai & data scitenst fouces i need to set to java,backend and python and little ai focues as per my resume level
