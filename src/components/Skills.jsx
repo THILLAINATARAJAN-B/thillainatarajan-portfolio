@@ -5,13 +5,13 @@ import { Brain, Code2, Database, Globe, Wrench, Zap } from 'lucide-react'
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'AI & Machine Learning',
-      icon: Brain,
+      title: 'Backend Development',
+      icon: Code2,
       color: '#3b82f6',
       gradient: 'linear-gradient(135deg, #3b82f6, #2563eb)',
       skills: [
-        'TensorFlow', 'PyTorch', 'Scikit-Learn', 'NLP', 'Computer Vision', 
-        'LLMs', 'RAG', 'YOLO', 'OpenCV', 'Transformers'
+        'Java', 'Spring Boot', 'Spring Security', 'REST APIs',
+        'Node.js', 'Express.js', 'Flask', 'FastAPI', 'WebSockets', 'JWT Auth'
       ]
     },
     {
@@ -20,27 +20,28 @@ const Skills = () => {
       color: '#10b981',
       gradient: 'linear-gradient(135deg, #10b981, #059669)',
       skills: [
-        'Python', 'JavaScript', 'Java', 'SQL', 'TypeScript'
+        'Java', 'Python', 'JavaScript', 'TypeScript', 'SQL'
       ]
     },
     {
-      title: 'Web Development',
+      title: 'Web & Full-Stack',
       icon: Globe,
       color: '#f59e0b',
       gradient: 'linear-gradient(135deg, #f59e0b, #d97706)',
       skills: [
-        'React', 'Node.js', 'Express', 'Flask', 'FastAPI', 
-        'MongoDB', 'PostgreSQL', 'REST API', 'HTML/CSS'
+        'Angular', 'React', 'HTML5', 'CSS3', 'Tailwind CSS',
+        'REST API', 'JSON', 'HTTP/HTTPS'
       ]
     },
     {
-      title: 'Data & Analytics',
+      title: 'Databases & Data',
       icon: Database,
       color: '#8b5cf6',
       gradient: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
       skills: [
-        'Power BI', 'Pandas', 'NumPy', 'Matplotlib', 'Excel', 
-        'Data Visualization', 'Statistical Analysis'
+        'MySQL', 'PostgreSQL', 'MongoDB',
+        'Schema Design', 'Indexing', 'Query Optimization',
+        'Pandas', 'NumPy', 'ETL Workflows'
       ]
     },
     {
@@ -49,18 +50,19 @@ const Skills = () => {
       color: '#ec4899',
       gradient: 'linear-gradient(135deg, #ec4899, #db2777)',
       skills: [
-        'Git/GitHub', 'Docker', 'CI/CD', 'Linux', 'VS Code', 
-        'Jupyter', 'Postman', 'Agile/Scrum'
+        'Git', 'GitHub', 'Docker', 'CI/CD',
+        'Postman', 'JUnit', 'Pytest', 'Agile/Scrum', 'Linux'
       ]
     },
     {
-      title: 'Specialized Skills',
-      icon: Zap,
+      title: 'AI & ML Exposure',
+      icon: Brain,
       color: '#06b6d4',
       gradient: 'linear-gradient(135deg, #06b6d4, #0891b2)',
       skills: [
-        'Speech Recognition', 'Audio Processing', 'Mobile Development (Android)', 
-        'Automation', 'API Integration', 'Cloud Platforms'
+        'TensorFlow', 'PyTorch', 'Scikit-Learn',
+        'NLP', 'Computer Vision', 'YOLO', 'OpenCV',
+        'Flask ML APIs', 'Feature Engineering'
       ]
     }
   ]
@@ -92,7 +94,7 @@ const Skills = () => {
             color: 'var(--primary-blue)',
             letterSpacing: '0.5px'
           }}>
-            FULL-STACK AI/ML DEVELOPER
+            JAVA BACKEND DEVELOPER
           </span>
         </div>
         <h2 className="section-title" style={{ 
@@ -105,7 +107,7 @@ const Skills = () => {
           marginBottom: '0',
           fontSize: '0.95rem'
         }}>
-          Comprehensive tech stack for building production-ready AI systems
+          Comprehensive tech stack for building scalable backend systems and full-stack applications
         </p>
       </div>
 
@@ -253,7 +255,7 @@ const Skills = () => {
         animationDelay: '0.6s'
       }}>
         {[
-          { label: 'AI/ML Skills', value: '10+', color: '#3b82f6' },
+          { label: 'Backend Skills', value: '10+', color: '#3b82f6' },
           { label: 'Languages', value: '5', color: '#10b981' },
           { label: 'Frameworks', value: '15+', color: '#f59e0b' },
           { label: 'Total Skills', value: '45+', color: '#8b5cf6' }
