@@ -1,492 +1,472 @@
-import React, { useState } from 'react'
-import { Briefcase, TrendingUp, Calendar, MapPin, Award, X } from 'lucide-react'
+import React from 'react'
+import { GraduationCap, Sparkles, MapPin, Calendar, TrendingUp, Quote } from 'lucide-react'
 
-// Import internship certificates
-import cloudZooCert from '../assets/Internships/Cloude Zoo.jpg'
-import codeGalattaCert from '../assets/Internships/Code Galatta.png'
-
-const Experience = () => {
-  const [selectedImage, setSelectedImage] = useState(null)
-
-  const experiences = [
-    {
-      title: 'AI Intern',
-      company: 'CodeGalatta',
-      location: 'Chennai',
-      duration: 'Mar 2024 - Jul 2024',
-      period: '5 Months',
-      type: 'Internship',
-      color: '#3b82f6',
-      gradient: 'linear-gradient(135deg, #2563eb, #3b82f6)',
-      certificateImage: codeGalattaCert,
-      achievements: [
-        'Developed NLP and automation projects that improved prediction accuracy by 20%',
-        'Integrated speech recognition with text analytics for real-time system enhancements',
-        'Worked on cutting-edge AI models for natural language understanding',
-        'Collaborated with cross-functional teams to deploy AI solutions'
-      ],
-      impact: '20% Accuracy Boost'
-    },
-    {
-      title: 'Data Analyst Intern',
-      company: 'CloudZoo India Softwares',
-      location: 'Tiruppur',
-      duration: 'Aug 2024 - Sep 2024',
-      period: '2 Months',
-      type: 'Internship',
-      color: '#0ea5e9',
-      gradient: 'linear-gradient(135deg, #0ea5e9, #38bdf8)',
-      certificateImage: cloudZooCert,
-      achievements: [
-        'Built AI-driven data dashboards using Power BI and Python for business insights',
-        'Automated Excel workflows and enhanced ERP reporting efficiency by 30%',
-        'Analyzed large datasets to extract actionable business intelligence',
-        'Created interactive visualizations for executive decision-making'
-      ],
-      impact: '30% Efficiency Gain'
-    }
-  ]
-
+const About = () => {
   return (
-    <section id="experience" className="section" style={{ 
+    <section id="about" className="section" style={{ 
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       padding: '60px 30px'
     }}>
-      {/* Header */}
-      <div className="fade-in-up" style={{ textAlign: 'center', marginBottom: '30px' }}>
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          background: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
-          padding: '8px 20px',
-          borderRadius: '30px',
-          marginBottom: '15px',
-          border: '2px solid var(--primary-blue)'
-        }}>
-          <Briefcase size={18} color="var(--primary-blue)" />
-          <span style={{
-            fontSize: '0.85rem',
-            fontWeight: '700',
-            color: 'var(--primary-blue)',
-            letterSpacing: '0.5px'
-          }}>
-            7 MONTHS PROFESSIONAL EXPERIENCE
-          </span>
-        </div>
+      {/* Compact Header */}
+      <div className="fade-in-up" style={{ textAlign: 'center', marginBottom: '35px' }}>
         <h2 className="section-title" style={{ 
-          marginBottom: '5px',
-          fontSize: 'clamp(1.8rem, 4vw, 2.3rem)'
+          marginBottom: '8px',
+          fontSize: 'clamp(2rem, 4vw, 2.5rem)'
         }}>
-          Professional <span className="section-title-accent">Experience</span>
+          About <span className="section-title-accent">Me</span>
         </h2>
         <p className="section-subtitle" style={{ 
           marginBottom: '0',
-          fontSize: '0.95rem'
+          fontSize: '1rem'
         }}>
-          Real-world AI and data science impact with measurable results
+          Final-year B.Tech student building Java backend systems and REST APIs
         </p>
       </div>
 
-      {/* Experience Cards - Side by Side */}
+      {/* Main Content Grid */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: '25px',
+        gridTemplateColumns: '1.2fr 1fr',
+        gap: '30px',
         maxWidth: '1200px',
         margin: '0 auto',
         width: '100%'
       }}
-      className="experience-grid">
-        {experiences.map((exp, idx) => (
-          <div
-            key={idx}
-            className="card fade-in-up"
-            style={{
-              animationDelay: `${idx * 0.15}s`,
-              position: 'relative',
-              overflow: 'hidden',
+      className="about-grid">
+        {/* Left Column */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+          {/* My Journey Card */}
+          <div className="card fade-in-up" style={{ 
+            animationDelay: '0.1s',
+            flex: 1
+          }}>
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '12px', 
+              marginBottom: '18px' 
+            }}>
+              <div style={{
+                width: '45px',
+                height: '45px',
+                background: 'linear-gradient(135deg, var(--primary-blue), var(--light-blue))',
+                borderRadius: '10px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <Sparkles size={22} color="white" />
+              </div>
+              <h3 style={{ 
+                fontSize: '1.3rem', 
+                fontWeight: '800', 
+                color: 'var(--text-primary)',
+                margin: 0
+              }}>
+                My Journey
+              </h3>
+            </div>
+            
+            <p style={{ 
+              color: 'var(--text-secondary)', 
+              lineHeight: '1.65', 
+              marginBottom: '14px',
+              fontSize: '0.95rem'
+            }}>
+              As a <strong>B.Tech AI & Data Science</strong> student at <strong>Anna University Regional Campus, Coimbatore</strong>, 
+              I specialize in building <strong>backend services, REST APIs, and full-stack applications</strong> using 
+              <strong> Java and Spring Boot</strong> — with hands-on project and internship experience delivering production-ready systems.
+            </p>
+
+            <p style={{ 
+              color: 'var(--text-secondary)', 
+              lineHeight: '1.65', 
+              marginBottom: '14px',
+              fontSize: '0.95rem'
+            }}>
+              My core strength lies in <strong style={{ color: 'var(--primary-blue)' }}>Java backend development</strong> — 
+              building <strong style={{ color: 'var(--primary-blue)' }}>secure, scalable REST APIs</strong> with 
+              <strong style={{ color: 'var(--primary-blue)' }}> Spring Boot and Spring Security</strong>. 
+              I also leverage <strong style={{ color: 'var(--primary-blue)' }}>Python</strong> for data pipelines and 
+              bring additional exposure to <strong style={{ color: 'var(--primary-blue)' }}>AI/ML integrations</strong> — 
+              making me a well-rounded engineer who can <strong style={{ color: 'var(--primary-blue)' }}>learn fast and ship complete solutions</strong>.
+            </p>
+
+            <p style={{ 
+              color: 'var(--text-secondary)', 
+              lineHeight: '1.65',
+              fontSize: '0.95rem',
+              marginBottom: '18px'
+            }}>
+              I thrive in <strong style={{ color: 'var(--primary-blue)' }}>collaborative, fast-paced environments</strong>, 
+              bringing a unique blend of <strong style={{ color: 'var(--primary-blue)' }}>solid backend engineering skills</strong> and 
+              <strong style={{ color: 'var(--primary-blue)' }}> versatile full-stack ability</strong> to deliver 
+              <strong style={{ color: 'var(--primary-blue)' }}> end-to-end production-ready applications</strong>.
+            </p>
+
+            {/* Personal Info Badges */}
+            <div style={{ 
+              paddingTop: '16px',
+              borderTop: '2px solid var(--border-gray)',
               display: 'flex',
-              flexDirection: 'column',
-              padding: '0'
-            }}
-          >
-            {/* Certificate Banner - Clickable */}
-            <div 
-              style={{
-                width: '100%',
-                height: '160px',
-                background: exp.certificateImage 
-                  ? `url(${exp.certificateImage}) center/cover` 
-                  : exp.gradient,
-                position: 'relative',
-                cursor: 'pointer',
-                overflow: 'hidden'
-              }}
-              onClick={(e) => {
-                e.stopPropagation()
-                if (exp.certificateImage) {
-                  setSelectedImage(exp.certificateImage)
-                }
-              }}
-            >
-              {/* Impact Badge */}
+              flexWrap: 'wrap',
+              gap: '10px'
+            }}>
               <div style={{
-                position: 'absolute',
-                top: '12px',
-                right: '12px',
-                background: exp.gradient,
-                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'var(--light-gray)',
                 padding: '6px 14px',
-                borderRadius: '18px',
-                fontSize: '0.7rem',
-                fontWeight: '800',
-                boxShadow: 'var(--shadow-lg)',
+                borderRadius: '25px',
+                border: '2px solid var(--border-gray)'
+              }}>
+                <MapPin size={14} color="var(--primary-blue)" />
+                <span style={{ 
+                  fontSize: '0.8rem', 
+                  fontWeight: '600',
+                  color: 'var(--text-secondary)'
+                }}>
+                  Coimbatore, TN
+                </span>
+              </div>
+              <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '5px'
+                gap: '6px',
+                background: 'var(--light-gray)',
+                padding: '6px 14px',
+                borderRadius: '25px',
+                border: '2px solid var(--border-gray)'
               }}>
-                <Award size={12} />
-                {exp.impact}
+                <Calendar size={14} color="var(--primary-blue)" />
+                <span style={{ 
+                  fontSize: '0.8rem', 
+                  fontWeight: '600',
+                  color: 'var(--text-secondary)'
+                }}>
+                  20 Years Old
+                </span>
               </div>
-
-              {/* Type Badge */}
               <div style={{
-                position: 'absolute',
-                top: '12px',
-                left: '12px',
-                background: 'rgba(255,255,255,0.95)',
-                color: exp.color,
-                padding: '5px 12px',
-                borderRadius: '15px',
-                fontSize: '0.7rem',
-                fontWeight: '800',
-                boxShadow: 'var(--shadow-md)'
-              }}>
-                {exp.type}
-              </div>
-
-              {/* Hover overlay */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'rgba(0,0,0,0.5)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                opacity: 0,
-                transition: 'opacity 0.3s'
-              }}
-              className="cert-overlay">
+                gap: '6px',
+                background: 'linear-gradient(135deg, var(--primary-blue), var(--light-blue))',
+                padding: '6px 14px',
+                borderRadius: '25px',
+                border: '2px solid var(--primary-blue)'
+              }}>
+                <TrendingUp size={14} color="white" />
+                <span style={{ 
+                  fontSize: '0.8rem', 
+                  fontWeight: '700',
+                  color: 'white'
+                }}>
+                  Graduating 2026
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Motivational Quote Card */}
+          <div className="card fade-in-up" style={{ 
+            animationDelay: '0.3s',
+            background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
+            border: '2px solid var(--primary-blue)',
+            position: 'relative',
+            padding: '20px 25px'
+          }}>
+            <Quote size={32} color="var(--primary-blue)" style={{ 
+              opacity: 0.2,
+              position: 'absolute',
+              top: '10px',
+              left: '15px'
+            }} />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <p style={{
+                fontSize: '1.05rem',
+                fontWeight: '600',
+                color: 'var(--text-primary)',
+                lineHeight: '1.6',
+                marginBottom: '10px',
+                fontStyle: 'italic'
+              }}>
+                "Good backend engineering isn't just about writing code — it's about building systems that are secure, scalable, and built to last."
+              </p>
+              <p style={{
+                fontSize: '0.85rem',
+                fontWeight: '700',
+                color: 'var(--primary-blue)',
+                textAlign: 'right'
+              }}>
+                — My Philosophy
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Education */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+          {/* Education Card */}
+          <div className="card card-highlight fade-in-up" style={{ 
+            animationDelay: '0.2s',
+            flex: 1
+          }}>
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '12px', 
+              marginBottom: '20px' 
+            }}>
+              <div style={{
+                width: '45px',
+                height: '45px',
+                background: 'linear-gradient(135deg, var(--primary-blue), var(--sky-blue))',
+                borderRadius: '10px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <GraduationCap size={22} color="white" />
+              </div>
+              <h3 style={{ 
+                fontSize: '1.3rem', 
+                fontWeight: '800', 
+                color: 'var(--text-primary)',
+                margin: 0
+              }}>
+                Education
+              </h3>
+            </div>
+
+            {/* Undergraduate */}
+            <div style={{ 
+              marginBottom: '18px',
+              padding: '16px',
+              background: 'var(--primary-white)',
+              borderRadius: '12px',
+              border: '2px solid var(--primary-blue)'
+            }}>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                marginBottom: '10px',
+                flexWrap: 'wrap',
+                gap: '8px'
+              }}>
+                <h4 style={{
+                  fontSize: '1.05rem',
+                  fontWeight: '800',
+                  color: 'var(--primary-blue)',
+                  margin: 0
+                }}>
+                  B.Tech in AI & Data Science
+                </h4>
                 <span style={{
+                  background: 'var(--primary-blue)',
                   color: 'white',
-                  fontSize: '0.85rem',
+                  padding: '4px 10px',
+                  borderRadius: '15px',
+                  fontSize: '0.75rem',
                   fontWeight: '700'
                 }}>
-                  🔍 Click to view certificate
+                  2022 - 2026
+                </span>
+              </div>
+              <p style={{
+                color: 'var(--text-secondary)',
+                fontWeight: '600',
+                marginBottom: '8px',
+                fontSize: '0.88rem'
+              }}>
+                Anna University Regional Campus, Coimbatore
+              </p>
+              <div style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                background: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
+                padding: '5px 12px',
+                borderRadius: '20px'
+              }}>
+                <TrendingUp size={14} color="var(--primary-blue)" />
+                <span style={{
+                  color: 'var(--primary-blue)',
+                  fontSize: '0.82rem',
+                  fontWeight: '700'
+                }}>
+                  CGPA: 8.2 / 10.0 (~82%)
                 </span>
               </div>
             </div>
 
-            {/* Content */}
-            <div style={{ padding: '20px' }}>
-              {/* Header Section */}
-              <div style={{ marginBottom: '18px' }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  marginBottom: '12px'
-                }}>
-                  <div style={{
-                    width: '50px',
-                    height: '50px',
-                    background: exp.gradient,
-                    borderRadius: '12px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: `0 8px 20px ${exp.color}30`,
-                    flexShrink: 0
-                  }}>
-                    <Briefcase size={24} color="white" />
-                  </div>
-
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <h3 style={{
-                      fontSize: '1.2rem',
-                      fontWeight: '800',
-                      color: 'var(--text-primary)',
-                      marginBottom: '3px',
-                      lineHeight: 1.2
-                    }}>
-                      {exp.title}
-                    </h3>
-                    <p style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '700',
-                      color: exp.color,
-                      margin: 0,
-                      lineHeight: 1.2
-                    }}>
-                      {exp.company}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Meta Info */}
-                <div style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '8px'
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    background: 'var(--light-gray)',
-                    padding: '5px 10px',
-                    borderRadius: '15px',
-                    border: '1px solid var(--border-gray)',
-                    fontSize: '0.75rem',
-                    fontWeight: '600',
-                    color: 'var(--text-secondary)'
-                  }}>
-                    <Calendar size={12} color={exp.color} />
-                    {exp.duration}
-                  </div>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    background: 'var(--light-gray)',
-                    padding: '5px 10px',
-                    borderRadius: '15px',
-                    border: '1px solid var(--border-gray)',
-                    fontSize: '0.75rem',
-                    fontWeight: '600',
-                    color: 'var(--text-secondary)'
-                  }}>
-                    <MapPin size={12} color={exp.color} />
-                    {exp.location}
-                  </div>
-                  <div style={{
-                    background: exp.gradient,
-                    color: 'white',
-                    padding: '5px 10px',
-                    borderRadius: '15px',
-                    fontSize: '0.75rem',
-                    fontWeight: '700'
-                  }}>
-                    {exp.period}
-                  </div>
-                </div>
-              </div>
-
-              {/* Divider */}
+            {/* HSC */}
+            <div style={{ 
+              marginBottom: '18px',
+              padding: '14px',
+              background: 'var(--light-gray)',
+              borderRadius: '10px',
+              border: '2px solid var(--border-gray)'
+            }}>
               <div style={{
-                height: '2px',
-                background: 'var(--border-gray)',
-                marginBottom: '15px'
-              }} />
-
-              {/* Achievements */}
-              <div>
-                <h4 style={{
-                  fontSize: '0.8rem',
-                  fontWeight: '700',
-                  color: 'var(--text-muted)',
-                  marginBottom: '10px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
-                }}>
-                  Key Achievements
-                </h4>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '8px'
-                }}>
-                  {exp.achievements.map((achievement, achIdx) => (
-                    <li key={achIdx} style={{
-                      display: 'flex',
-                      gap: '8px',
-                      color: 'var(--text-secondary)',
-                      lineHeight: '1.5',
-                      fontSize: '0.85rem'
-                    }}>
-                      <TrendingUp
-                        size={14}
-                        style={{
-                          color: exp.color,
-                          flexShrink: 0,
-                          marginTop: '3px'
-                        }}
-                      />
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Summary Stats */}
-      <div className="fade-in" style={{
-        marginTop: '30px',
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '20px',
-        flexWrap: 'wrap',
-        animationDelay: '0.3s'
-      }}>
-        {[
-          { label: 'Total Experience', value: '7 Months', color: '#3b82f6' },
-          { label: 'Companies', value: '2', color: '#10b981' },
-          { label: 'MiniProjects', value: '13+', color: '#f59e0b' }
-        ].map((stat, idx) => (
-          <div key={idx} style={{
-            textAlign: 'center',
-            padding: '12px 20px',
-            background: 'var(--primary-white)',
-            border: '2px solid var(--border-gray)',
-            borderRadius: '12px',
-            minWidth: '120px',
-            transition: 'var(--transition)'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.borderColor = stat.color
-            e.currentTarget.style.transform = 'translateY(-3px)'
-            e.currentTarget.style.boxShadow = 'var(--shadow-lg)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = 'var(--border-gray)'
-            e.currentTarget.style.transform = 'translateY(0)'
-            e.currentTarget.style.boxShadow = 'none'
-          }}>
-            <div style={{
-              fontSize: '1.5rem',
-              fontWeight: '900',
-              color: stat.color,
-              marginBottom: '2px'
-            }}>
-              {stat.value}
-            </div>
-            <div style={{
-              fontSize: '0.7rem',
-              fontWeight: '600',
-              color: 'var(--text-muted)',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}>
-              {stat.label}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Certificate Image Popup */}
-      {selectedImage && (
-        <div
-          className="image-modal"
-          onClick={() => setSelectedImage(null)}
-          style={{ 
-            padding: '20px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            style={{
-              position: 'relative',
-              maxWidth: '95vw',
-              maxHeight: '95vh',
-              background: 'var(--primary-white)',
-              borderRadius: '16px',
-              padding: '15px',
-              boxShadow: 'var(--shadow-2xl)'
-            }}
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedImage(null)}
-              style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                background: 'rgba(0,0,0,0.8)',
-                border: 'none',
-                borderRadius: '50%',
-                width: '45px',
-                height: '45px',
                 display: 'flex',
+                justifyContent: 'space-between',
                 alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                zIndex: 10,
-                transition: 'var(--transition)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(0,0,0,1)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(0,0,0,0.8)'
-              }}
-            >
-              <X size={24} color="white" />
-            </button>
+                marginBottom: '8px',
+                flexWrap: 'wrap',
+                gap: '6px'
+              }}>
+                <h4 style={{
+                  fontSize: '0.95rem',
+                  fontWeight: '700',
+                  color: 'var(--text-primary)',
+                  margin: 0
+                }}>
+                  Higher Secondary (HSC)
+                </h4>
+                <span style={{
+                  background: 'var(--primary-white)',
+                  color: 'var(--text-primary)',
+                  padding: '3px 10px',
+                  borderRadius: '12px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  border: '2px solid var(--border-gray)'
+                }}>
+                  2022
+                </span>
+              </div>
+              <p style={{
+                color: 'var(--text-secondary)',
+                fontWeight: '600',
+                fontSize: '0.84rem',
+                marginBottom: '4px'
+              }}>
+                K.G. Matric HSS, Annur
+              </p>
+              <p style={{
+                color: 'var(--text-muted)',
+                fontSize: '0.8rem',
+                fontWeight: '600'
+              }}>
+                <strong style={{ color: 'var(--primary-blue)' }}>Score:</strong> 89%
+              </p>
+            </div>
 
-            {/* Full Certificate Image */}
-            <img 
-              src={selectedImage}
-              alt="Internship Certificate"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxHeight: '90vh',
-                objectFit: 'contain',
-                borderRadius: '12px',
-                display: 'block'
-              }}
-            />
-
-            {/* Click to Close Hint */}
-            <p style={{
-              textAlign: 'center',
-              fontSize: '0.85rem',
-              color: 'var(--text-muted)',
-              marginTop: '12px',
-              fontWeight: '600'
+            {/* SSLC */}
+            <div style={{ 
+              padding: '14px',
+              background: 'var(--light-gray)',
+              borderRadius: '10px',
+              border: '2px solid var(--border-gray)'
             }}>
-              Click outside or press ✕ to close
-            </p>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: '8px',
+                flexWrap: 'wrap',
+                gap: '6px'
+              }}>
+                <h4 style={{
+                  fontSize: '0.95rem',
+                  fontWeight: '700',
+                  color: 'var(--text-primary)',
+                  margin: 0
+                }}>
+                  Secondary (SSLC)
+                </h4>
+                <span style={{
+                  background: 'var(--primary-white)',
+                  color: 'var(--text-primary)',
+                  padding: '3px 10px',
+                  borderRadius: '12px',
+                  fontSize: '0.72rem',
+                  fontWeight: '700',
+                  border: '2px solid var(--border-gray)'
+                }}>
+                  2020
+                </span>
+              </div>
+              <p style={{
+                color: 'var(--text-secondary)',
+                fontWeight: '600',
+                fontSize: '0.84rem',
+                marginBottom: '4px'
+              }}>
+                K.G. Matric HSS, Annur
+              </p>
+              <p style={{
+                color: 'var(--text-muted)',
+                fontSize: '0.8rem',
+                fontWeight: '600'
+              }}>
+                <strong style={{ color: 'var(--primary-blue)' }}>Score:</strong> 98%
+              </p>
+            </div>
+          </div>
+
+          {/* Core Values Card */}
+          <div className="card fade-in-up" style={{ 
+            animationDelay: '0.4s',
+            background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)',
+            padding: '18px 20px'
+          }}>
+            <h4 style={{
+              fontSize: '1rem',
+              fontWeight: '700',
+              color: 'var(--text-primary)',
+              marginBottom: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px'
+            }}>
+              <div style={{
+                width: '6px',
+                height: '6px',
+                background: 'var(--primary-blue)',
+                borderRadius: '50%'
+              }} />
+              Core Values
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {[
+                '☕ Java & Backend Engineering',
+                '⚡ Rapid Learning & Adaptation',
+                '🔧 Clean, Scalable Code',
+                '🤝 Collaborative Problem Solving'
+              ].map((value, idx) => (
+                <div key={idx} style={{
+                  fontSize: '0.85rem',
+                  color: 'var(--text-secondary)',
+                  fontWeight: '600',
+                  padding: '6px 10px',
+                  background: 'var(--light-gray)',
+                  borderRadius: '8px',
+                  border: '1px solid var(--border-gray)'
+                }}>
+                  {value}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      )}
+      </div>
 
       <style>{`
-        .card:hover .cert-overlay {
-          opacity: 1 !important;
-        }
-
         @media (max-width: 968px) {
-          .experience-grid {
+          .about-grid {
             grid-template-columns: 1fr !important;
             gap: 20px !important;
           }
-          #experience {
+          #about {
             min-height: auto !important;
-            padding: 50px 15px !important;
+            padding: 50px 20px !important;
           }
         }
       `}</style>
@@ -494,4 +474,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default About
