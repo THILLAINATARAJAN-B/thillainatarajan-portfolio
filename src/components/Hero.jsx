@@ -1,4 +1,3 @@
-i need u help to make my portfolio a small tweak  based on my resume ok.
 import React from 'react'
 import { Github, Linkedin, Mail, ArrowDown, Sparkles, Download } from 'lucide-react'
 import profilePic from '../assets/profile.jpg';
