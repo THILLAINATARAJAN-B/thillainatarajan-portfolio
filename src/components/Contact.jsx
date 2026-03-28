@@ -47,8 +47,8 @@ const Contact = () => {
   ]
 
   const opportunities = [
-    { icon: Briefcase, text: 'Full-time AI/ML roles', color: '#3b82f6' },
-    { icon: Code2, text: 'Data Science projects', color: '#10b981' },
+    { icon: Briefcase, text: 'Full-time Java Backend roles', color: '#3b82f6' },
+    { icon: Code2, text: 'Backend & API projects', color: '#10b981' },
     { icon: Rocket, text: 'Hackathons & challenges', color: '#f59e0b' },
     { icon: Users, text: 'Open-source collaborations', color: '#8b5cf6' }
   ]
@@ -80,7 +80,7 @@ const Contact = () => {
             color: 'var(--primary-blue)',
             letterSpacing: '0.5px'
           }}>
-            LET'S BUILD SOMETHING AMAZING
+            LET'S BUILD SOMETHING TOGETHER
           </span>
         </div>
         <h2 className="section-title" style={{ 
@@ -93,7 +93,7 @@ const Contact = () => {
           marginBottom: '0',
           fontSize: '0.95rem'
         }}>
-          Open to opportunities, collaborations, and exciting AI/ML projects
+          Open to Java backend roles, collaborations, and engineering challenges
         </p>
       </div>
 
@@ -271,7 +271,7 @@ const Contact = () => {
               marginBottom: '20px',
               fontSize: '0.9rem'
             }}>
-              Passionate about AI/ML and building production-ready systems. Ready to contribute from day one with <strong>6 hackathons, 3 wins, and 10+ projects</strong>.
+              Passionate about Java backend and full-stack development. Ready to contribute from day one with <strong>4 hackathons, 2 internships, and 4+ production projects</strong>.
             </p>
 
             {/* Opportunities Grid */}
@@ -339,9 +339,9 @@ const Contact = () => {
               border: '2px solid var(--border-gray)'
             }}>
               {[
-                { label: 'Projects', value: '10+' },
-                { label: 'Hackathons', value: '6' },
-                { label: 'Wins', value: '3' }
+                { label: 'Projects', value: '4+' },
+                { label: 'Hackathons', value: '4' },
+                { label: 'Internships', value: '2' }
               ].map((stat, idx) => (
                 <div key={idx} style={{ textAlign: 'center' }}>
                   <p style={{
