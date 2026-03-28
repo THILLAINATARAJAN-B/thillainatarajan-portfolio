@@ -102,7 +102,7 @@ const Header = () => {
             letterSpacing: '-1px',
             boxShadow: '0 8px 20px rgba(37, 99, 235, 0.25)'
           }}>
-            TB
+            TN
           </div>
           <div style={{
             display: 'flex',
@@ -124,7 +124,7 @@ const Header = () => {
               color: 'var(--text-muted)',
               letterSpacing: '0.3px'
             }}>
-              AI Engineer
+              Java Developer
             </span>
           </div>
         </a>
