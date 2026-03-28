@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Github, X, Target, Lightbulb, TrendingUp, CheckCircle, ExternalLink, Award, Users } from 'lucide-react'
 
 // Import project detail images
+import expenseTracker1 from '../assets/projects/expense-tracker-1.png'
+import expenseTracker2 from '../assets/projects/expense-tracker-2.png'
 import remotePC1 from '../assets/projects/remote-pc-1.png'
 import remotePC2 from '../assets/projects/remote-pc-2.png'
 import eduPlatform1 from '../assets/projects/edu-platform-1.png'
@@ -18,6 +20,7 @@ import atria2 from '../assets/projects/atria-2.png'
 import atria3 from '../assets/projects/atria-3.png'
 
 // Import thumbnail images
+import expenseTrackerThumb from '../assets/projects/thumbnails/expense-tracker-thumb.jpg'
 import remotePCThumb from '../assets/projects/thumbnails/remote-pc-thumb.jpg'
 import eduPlatformThumb from '../assets/projects/thumbnails/edu-platform-thumb.jpg'
 import maptizerThumb from '../assets/projects/thumbnails/maptizer-thumb.jpg'
@@ -42,6 +45,45 @@ const Projects = () => {
   }, [selectedProject])
 
   const projects = [
+    {
+      title: 'Smart Expense Tracker',
+      shortDesc: 'Full-stack personal finance application built with Spring Boot 3 REST API and Angular 17, featuring JWT authentication, budget tracking, and category-wise analytics.',
+      tech: ['Java', 'Spring Boot', 'Angular', 'JWT', 'Spring Security', 'MySQL'],
+      github: 'https://github.com/THILLAINATARAJAN-B/SmartExpenseTracker',
+      achievement: 'Full-Stack Java Project – Feb 2026 to Mar 2026',
+      impact: 'Production-Ready Finance Application',
+      category: 'Java/Full-Stack',
+      thumbnail: expenseTrackerThumb,
+
+      challenge: `Managing personal finances is a common struggle—most people track expenses manually in spreadsheets, leading to inconsistencies, lack of insights, and no proactive budget alerts. Existing tools are either too complex or lack developer-grade backend architecture. The goal was to build a production-ready expense management system with secure authentication, structured API design, and a responsive frontend—end to end.`,
+
+      solution: `Built a full-stack application using Spring Boot 3 as the REST API backend and Angular 17 as the frontend. The backend implements stateless JWT-based authentication with Spring Security 6 and BCrypt password hashing, ensuring secure session management without server-side state. The frontend communicates via a well-defined API contract with CORS configuration. Expense data is persisted in a relational database with category-wise analytics, budget thresholds, and CSV export support.`,
+
+      results: [
+        'Implemented JWT authentication with stateless Spring Security filter chain — zero session storage on server',
+        'Built full CRUD for expense management with category-wise budget tracking and automated overspend alerts',
+        'Designed dashboard analytics showing spending breakdown, trend graphs, and budget utilization per category',
+        'Enabled CSV export with client-side filtering by date range, category, and keyword search',
+        'Configured BCrypt password hashing and CORS policies for secure Angular–Spring Boot communication'
+      ],
+
+      story: `Smart Expense Tracker was built as a self-driven full-stack project to demonstrate production-level Java backend development. The motivation came from wanting to build something real — not just a CRUD demo, but a system with proper authentication architecture, business logic, and a polished frontend.
+
+I designed the entire system architecture myself — from the JWT filter chain and role-based access in Spring Security, to the Angular service layer and HTTP interceptors. The most technically interesting part was implementing the stateless JWT authentication: the token is validated on every request via a custom filter, without any server-side session — which is the industry-standard approach for scalable REST APIs.
+
+This project taught me how backend security, API design, and frontend integration come together in a real application, and it directly reflects the kind of backend engineering work I want to continue doing professionally.`,
+
+      skillsGained: [
+        'Spring Boot 3 REST API Design',
+        'Spring Security 6 & JWT Auth',
+        'BCrypt Password Hashing',
+        'Angular 17 Frontend Integration',
+        'CORS Configuration & API Contracts',
+        'MySQL Schema Design & CRUD'
+      ],
+
+      images: [expenseTracker1, expenseTracker2]
+    },
     {
       title: 'Intelligent Remote PC Task Automation',
       shortDesc: 'AI-powered agent system that remotely controls a PC through natural language commands, enabling file access, automation, and task execution from any device.',
@@ -84,7 +126,7 @@ During the hackathon, we worked intensely for 48 hours learning Intel's DeepNN t
       shortDesc: 'AI-powered academic assistant that converts educational videos into structured notes, summaries, and assessments with multilingual support.',
       tech: ['Python', 'YOLO', 'OCR', 'RAG', 'BART', 'Mixtral-8x7B'],
       github: 'https://github.com/THILLAINATARAJAN-B/Multilingual-Education-Platform',
-      achievement: ' 2nd Place – Hack Beyond Limit',
+      achievement: '2nd Place – Hack Beyond Limit',
       impact: 'Potential to support 10K+ learners',
       category: 'AI/Education',
       thumbnail: eduPlatformThumb,
@@ -103,9 +145,7 @@ During the hackathon, we worked intensely for 48 hours learning Intel's DeepNN t
       
       story: `This was our third hackathon, and winning 2nd place became a major turning point for our team. The idea originally came from our academic struggles—we studied from multiple textbooks, and whenever we had doubts, online search engines or GPT gave too much extra information, causing diversion. We needed a tool that explained concepts *only* from our books, including mathematical reasoning, and kept our learning focused.
 
-During development, I built the video-to-PDF note generation system—extracting text, diagrams, and audio insights. My teammate Siva engineered the RAG system that kept answers grounded to the textbook. Another teammate designed the UI and supported model training. I led the team as the core developer, orchestrating the architecture and integrating all systems into one unified pipeline.
-
-We worked continuously for 24 hours, and the moment everything integrated successfully without errors—it felt like magic. After the event, our Dean personally reviewed the project and encouraged us to turn it into a startup-level educational platform, telling us: "Do not stop. This is scalable." That recognition motivated us to continue building the platform beyond the hackathon.`,
+During development, I built the video-to-PDF note generation system—extracting text, diagrams, and audio insights. My teammate Siva engineered the RAG system that kept answers grounded to the textbook. Another teammate designed the UI and supported model training. I led the team as the core developer, orchestrating the architecture and integrating all systems into one unified pipeline. We worked continuously for 24 hours, and the moment everything integrated successfully without errors—it felt like magic. After the event, our Dean personally reviewed the project and encouraged us to turn it into a startup-level educational platform, telling us: "Do not stop. This is scalable." That recognition motivated us to continue building the platform beyond the hackathon.`,
       
       skillsGained: [
         'RAG Architecture & Grounded Learning',
@@ -179,9 +219,7 @@ Although we didn't receive formal recognition, the experience was extremely valu
         'Created an AI assistant to simplify legal, civic, and governance concepts'
       ],
       
-      story: `This project was built during our first international hackathon—the GenAI x GenderTech Hackathon by Amrita University (Dec 2024 – Jan 2025), where we were selected among the Top 10 finalists from 250+ teams.
-
-The experience pushed us to work at our highest level. The night before the final presentation, our team stayed awake almost the entire night, preparing the demo, polishing the workflows, and practicing how to communicate our vision clearly. After resting only a few hours (3:00 AM to 6:00 AM), we refined the pitch and presented it to international judges, including engineers from Japan and South America.
+      story: `This project was built during our first international hackathon—the GenAI x GenderTech Hackathon by Amrita University (Dec 2024 – Jan 2025), where we were selected among the Top 10 finalists from 250+ teams. The experience pushed us to work at our highest level. The night before the final presentation, our team stayed awake almost the entire night, preparing the demo, polishing the workflows, and practicing how to communicate our vision clearly. After resting only a few hours (3:00 AM to 6:00 AM), we refined the pitch and presented it to international judges, including engineers from Japan and South America.
 
 Presenting to global experts was a turning point—it taught us the importance of storytelling, user empathy, and the responsibility of building technology that serves society. Through this project, we aimed to empower women across India with accessible knowledge about the constitution, leadership pathways, rights, governance processes, and a supportive AI that can guide them whenever they need clarity.`,
       
@@ -219,9 +257,7 @@ Presenting to global experts was a turning point—it taught us the importance o
       
       story: `This was my first full-stack project, built as part of the Naan Mudhalvan academic program. As the team lead, I came up with the idea after observing how much time teachers lost taking attendance and how often students exploited manual systems.
 
-Originally, the project started with a simple ID-and-password–based check-in process. But I realized this wasn't fast enough for real classrooms. I designed and implemented the transition to a QR-based system, which transformed the platform into a fast, secure, and user-friendly solution.
-
-Working with a 4-member team taught me leadership, system design, and cloud deployment fundamentals. Seeing the concept evolve—from a basic login system to a dynamic QR attendance platform—was a major milestone in my journey as a developer.`,
+Originally, the project started with a simple ID-and-password–based check-in process. But I realized this wasn't fast enough for real classrooms. I designed and implemented the transition to a QR-based system, which transformed the platform into a fast, secure, and user-friendly solution. Working with a 4-member team taught me leadership, system design, and cloud deployment fundamentals. Seeing the concept evolve—from a basic login system to a dynamic QR attendance platform—was a major milestone in my journey as a developer.`,
       
       skillsGained: [
         'Full-Stack Development',
@@ -303,7 +339,7 @@ We finished with a fully working multilingual AI education platform—and placed
             color: 'var(--primary-blue)',
             letterSpacing: '0.5px'
           }}>
-            6 HACKATHONS • 3 WINS • 10+ AI/ML PROJECTS
+            4 HACKATHONS • 7+ PROJECTS • 2 INTERNSHIPS
           </span>
         </div>
         <h2 className="section-title" style={{ 
@@ -316,7 +352,7 @@ We finished with a fully working multilingual AI education platform—and placed
           marginBottom: '0',
           fontSize: '0.95rem'
         }}>
-          Production-ready AI systems solving real-world problems with measurable impact
+          Production-ready backend systems and full-stack applications solving real-world problems
         </p>
       </div>
 
@@ -511,7 +547,7 @@ We finished with a fully working multilingual AI education platform—and placed
         ))}
       </div>
 
-      {/* Project Modal (same as before - keeping your existing modal code) */}
+      {/* Project Modal */}
       {selectedProject && (
         <div
           className="image-modal"
