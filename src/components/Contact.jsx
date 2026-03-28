@@ -339,7 +339,7 @@ const Contact = () => {
               border: '2px solid var(--border-gray)'
             }}>
               {[
-                { label: 'Projects', value: '4+' },
+                { label: 'Projects', value: '6+' },
                 { label: 'Hackathons', value: '4' },
                 { label: 'Internships', value: '2' }
               ].map((stat, idx) => (
