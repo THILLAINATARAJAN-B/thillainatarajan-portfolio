@@ -22,7 +22,7 @@ const About = () => {
           marginBottom: '0',
           fontSize: '1rem'
         }}>
-          Final-year AI & Data Science student architecting intelligent systems
+          Final-year B.Tech student building Java backend systems and REST APIs
         </p>
       </div>
 
@@ -77,7 +77,8 @@ const About = () => {
               fontSize: '0.95rem'
             }}>
               As a <strong>B.Tech AI & Data Science</strong> student at <strong>Anna University Regional Campus, Coimbatore</strong>, 
-              I specialize in building production-ready AI/ML systems, autonomous agents, and data-driven applications.
+              I specialize in building <strong>backend services, REST APIs, and full-stack applications</strong> using 
+              <strong> Java and Spring Boot</strong> — with hands-on project and internship experience delivering production-ready systems.
             </p>
 
             <p style={{ 
@@ -86,11 +87,12 @@ const About = () => {
               marginBottom: '14px',
               fontSize: '0.95rem'
             }}>
-              My passion lies in <strong style={{ color: 'var(--primary-blue)' }}>solving complex problems</strong> through 
-              <strong style={{ color: 'var(--primary-blue)' }}> Machine Learning, Deep Learning, and NLP</strong>. 
-              To showcase these AI capabilities, I mastered <strong style={{ color: 'var(--primary-blue)' }}>full-stack development</strong> — 
-              not as my core focus, but as a <strong style={{ color: 'var(--primary-blue)' }}>powerful tool</strong> that demonstrates my 
-              <strong style={{ color: 'var(--primary-blue)' }}> ability to learn rapidly and ship complete solutions</strong>.
+              My core strength lies in <strong style={{ color: 'var(--primary-blue)' }}>Java backend development</strong> — 
+              building <strong style={{ color: 'var(--primary-blue)' }}>secure, scalable REST APIs</strong> with 
+              <strong style={{ color: 'var(--primary-blue)' }}> Spring Boot and Spring Security</strong>. 
+              I also leverage <strong style={{ color: 'var(--primary-blue)' }}>Python</strong> for data pipelines and 
+              bring additional exposure to <strong style={{ color: 'var(--primary-blue)' }}>AI/ML integrations</strong> — 
+              making me a well-rounded engineer who can <strong style={{ color: 'var(--primary-blue)' }}>learn fast and ship complete solutions</strong>.
             </p>
 
             <p style={{ 
@@ -99,10 +101,10 @@ const About = () => {
               fontSize: '0.95rem',
               marginBottom: '18px'
             }}>
-              I thrive in <strong style={{ color: 'var(--primary-blue)' }}>fast-paced environments</strong>, 
-              bringing a unique blend of <strong style={{ color: 'var(--primary-blue)' }}>deep AI expertise</strong> and 
-              <strong style={{ color: 'var(--primary-blue)' }}> versatile engineering skills</strong> to deliver 
-              <strong style={{ color: 'var(--primary-blue)' }}> end-to-end AI-powered products</strong>.
+              I thrive in <strong style={{ color: 'var(--primary-blue)' }}>collaborative, fast-paced environments</strong>, 
+              bringing a unique blend of <strong style={{ color: 'var(--primary-blue)' }}>solid backend engineering skills</strong> and 
+              <strong style={{ color: 'var(--primary-blue)' }}> versatile full-stack ability</strong> to deliver 
+              <strong style={{ color: 'var(--primary-blue)' }}> end-to-end production-ready applications</strong>.
             </p>
 
             {/* Personal Info Badges */}
@@ -193,7 +195,7 @@ const About = () => {
                 marginBottom: '10px',
                 fontStyle: 'italic'
               }}>
-                "The best way to predict the future is to invent it. I build AI systems that don't just adapt to tomorrow—they create it."
+                "Good backend engineering isn't just about writing code — it's about building systems that are secure, scalable, and built to last."
               </p>
               <p style={{
                 fontSize: '0.85rem',
@@ -434,9 +436,9 @@ const About = () => {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               {[
-                '🎯 Results-Driven Excellence',
+                '☕ Java & Backend Engineering',
                 '⚡ Rapid Learning & Adaptation',
-                '🚀 Innovation Through AI',
+                '🔧 Clean, Scalable Code',
                 '🤝 Collaborative Problem Solving'
               ].map((value, idx) => (
                 <div key={idx} style={{
